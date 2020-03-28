@@ -1,0 +1,21 @@
+---
+
+galaxy_info:
+  author: bilalcaliskan
+  role_name: vagrant_preparation
+  description: Simple ansible role to prepare Vagrant environment on Rhel/Centos 7/8 servers
+  min_ansible_version: 2.7
+  galaxy_tags:
+    - configuration 
+    - vagrant
+    - preparation
+  license: "license (BSD, MIT)"
+  platforms:
+    - name: EL 
+      versions: 
+        - 7
+        - 8
+ 
+dependencies: []
+
+...
