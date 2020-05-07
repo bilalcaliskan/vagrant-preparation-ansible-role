@@ -1,11 +1,7 @@
 ---
 
-- name: Autoremove unneeded packages installed as dependencies
-  yum:
-    autoremove: yes
-
 - name: Install required packages
-  yum:
+  package:
     name: "{{ item }}"
     state: present
   loop: "{{ required_packages }}"
@@ -22,7 +18,7 @@
   service:
     name: firewalld
     state: started
-    enabled: yes
+    enabled: true
 
 - name: Set timezone to {{ timezone }}
   timezone:
