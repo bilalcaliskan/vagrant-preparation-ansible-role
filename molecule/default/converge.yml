@@ -4,6 +4,6 @@
   hosts: all
   become: true
   roles:
-    - role: bilalcaliskan.nginx
+    - role: bilalcaliskan.vagrant_preparation
 
 ...
