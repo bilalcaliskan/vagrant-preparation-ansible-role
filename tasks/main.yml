@@ -19,6 +19,7 @@
     name: firewalld
     state: started
     enabled: true
+  changed_when: false
 
 - name: Set timezone to {{ timezone }}
   timezone:
