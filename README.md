@@ -1,41 +1,37 @@
 ## Vagrant Preparation Ansible Role
 
-[![Build Status](https://travis-ci.org/bilalcaliskan/vagrant_preparation-ansible-role.svg?branch=master)](https://travis-ci.org/bilalcaliskan/vagrant_preparation-ansible-role)
+[![CI](https://github.com/bilalcaliskan/remi-ansible-role/workflows/CI/badge.svg?event=push)](https://github.com/bilalcaliskan/remi-ansible-role/actions?query=workflow%3ACI)
 
-Sets up Vagrant development environment.
+Sets up Vagrant development environment on RHEL/CentOS 7/8 servers.
 
-## Requirements
+### Requirements
 
-No special requirements; note that this role requires root access, so either run it in a playbook with a global `become: yes`, or invoke the role in your playbook like:
+No special requirements. Also note that this role requires root access, so either run
+it in a playbook with a global `become: true`, or invoke the role in your playbook like:
 
-      - hosts: all
-        become: true
-        roles:
-          - role: bilalcaliskan.vagrant_preparation
+```yaml
+- hosts: all
+  become: true
+  roles:
+    - bilalcaliskan.vagrant_preparation
+```
 
-## Role Variables
+### Role Variables
+See the default values in [defaults/main.yml](defaults/main.yml). You can overwrite them in [vars/main.yml](vars/main.yml) if neccessary or you can set them while running playbook.
 
-See the default values in 'defaults/main.yml'. You can overwrite them in 'vars/main.yml' if neccessary.
-
-## Dependencies
+### Dependencies
 
 None
 
-## Example Playbook
+### Example Playbook File
 
-      - hosts: all
-        become: true
-        vars_files:
-          - vars/main.yml
-        roles:
-          - { role: bilalcaliskan.vagrant_preparation }
+```yaml
+- hosts: all
+  become: true
+  roles:
+    - role: bilalcaliskan.vagrant_preparation
+```
 
-*Inside `vars/main.yml`*:
-      timezone: Europe/Istanbul
-      required_packages:
-        - java-1.8.0-openjdk
-        - firewalld
-
-## License
+### License
 
 MIT / BSD
