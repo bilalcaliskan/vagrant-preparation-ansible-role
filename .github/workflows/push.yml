@@ -8,7 +8,7 @@ on:
 
 defaults:
   run:
-    working-directory: 'bilalcaliskan.nginx'
+    working-directory: 'bilalcaliskan.vagrant_preparation'
 
 jobs:
   lint:
@@ -17,7 +17,7 @@ jobs:
       - name: Check out the codebase.
         uses: actions/checkout@v2
         with:
-          path: 'bilalcaliskan.nginx'
+          path: 'bilalcaliskan.vagrant_preparation'
 
       - name: Set up Python 3.
         uses: actions/setup-python@v2
@@ -43,7 +43,7 @@ jobs:
       - name: Check out the codebase.
         uses: actions/checkout@v2
         with:
-          path: 'bilalcaliskan.nginx'
+          path: 'bilalcaliskan.vagrant_preparation'
 
       - name: Set up Python 3.
         uses: actions/setup-python@v2
@@ -87,4 +87,4 @@ jobs:
         uses: robertdebock/galaxy-action@1.1.0
         with:
           galaxy_api_key: ${{ secrets.GALAXY_API_KEY }}
-          path: 'bilalcaliskan.nginx'
+          path: 'bilalcaliskan.vagrant_preparation'
