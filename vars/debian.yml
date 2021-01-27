@@ -1,0 +1,5 @@
+---
+
+required_packages:
+  - openjdk-8-jdk
+  - firewalld

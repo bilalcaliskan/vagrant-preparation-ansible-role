@@ -19,6 +19,8 @@ it in a playbook with a global `become: true`, or invoke the role in your playbo
 ### Role Variables
 See the default values in [defaults/main.yml](defaults/main.yml). You can overwrite them in [vars/main.yml](vars/main.yml) if neccessary or you can set them while running playbook.
 
+Also please see the Redhat ansible_os_family specific variables in [vars/redhat.yml](vars/redhat.yml) and Debian ansible_os_family specific variables in [vars/debian.yml](vars/debian.yml).
+
 ### Dependencies
 
 None
