@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/bilalcaliskan/vagrant_preparation-ansible-role/workflows/CI/badge.svg?event=push)](https://github.com/bilalcaliskan/vagrant_preparation-ansible-role/actions?query=workflow%3ACI)
 
-Sets up Vagrant development environment on RHEL/CentOS 7/8 servers.
+Sets up Vagrant development environment.
 
 ### Requirements
 
