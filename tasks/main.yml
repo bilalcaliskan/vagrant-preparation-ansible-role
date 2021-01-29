@@ -3,6 +3,12 @@
 - name: Include OS specific variables.
   include_vars: "{{ ansible_os_family | lower }}.yml"
 
+- name: Update cache on Debian based hosts
+  apt:
+    update_cache: true
+  when: ansible_facts['os_family'] == "Debian"
+  changed_when: false
+
 - name: Install required packages
   package:
     name: "{{ item }}"
