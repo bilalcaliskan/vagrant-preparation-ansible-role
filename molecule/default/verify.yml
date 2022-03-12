@@ -1,5 +1,4 @@
 ---
-
 - name: Verify role
   hosts: all
   tasks:
